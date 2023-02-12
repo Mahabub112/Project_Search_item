@@ -7,6 +7,7 @@ let result = document.querySelector(".result")
 let count = 0
 
 
+
 let arr = ["mahabub","shakib","shanto","rakib","shamul","azad", "mamun"]
 
 arr.map(item=>{
@@ -22,17 +23,18 @@ btn.addEventListener("click", function(){
     if(item.toLowerCase().includes(sbtn.value.toLowerCase())){
       // ul.innerHTML += `<li style="background:yellow"> ${item} </li>`
       let larr = []
-
+      let count1 = 0
       item.split("").map(letter=>{
         if(letter.toLowerCase() == sbtn.value.toLowerCase()){
           larr.push(`<span style="background: yellow">${letter} </span>`)
           count++
+          count1++
         }else{
           larr.push(letter)
           console.log(length.larr)
         }
       })
-      ul.innerHTML += `<li>${larr.join("")}</li>`
+      ul.innerHTML += `<li>${larr.join("")} ${count1}</li>`
       result.innerHTML = count
     }
   })
